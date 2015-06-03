@@ -4,90 +4,83 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
+// define variables
+$brown: #A98651;
+$gold: #FDC77C;
+$gray: #B5AEA4;
+$light-gray: #D6DCE1;
+$sky-blue: #8795B1;
+$gray-blue: #798197;
 
-/* Space out content a bit */
+// typography
+@import url(http://fonts.googleapis.com/css?family=Poiret+One|Quicksand:300,400,700);
+$poiret: "Poiret One", Helvetica;
+$quicksand: "Quicksand", Arial;
+
+// base styles
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+  background: white;
+  font-size: 16px;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  font-family: $poiret;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+}
+
+a {
+  color: $sky-blue;
+  &:hover{
+  color: darken($sky-blue, 10%);
+  text-decoration: none;
   }
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
+// main content
+div.main {
+  img.profile {
+    border-radius: 50%;
+    width: 50%;
+    max-width: 300px;
+  }
+  h1 {
+    color: $brown;
+    font-size: 2.5em;
+    font-family: $quicksand;
+    font-weight: 400;
   }
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
+div.tagline {
+  p{
+    font-size: 1.5em;
+    letter-spacing: .5px;
   }
+}
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
+// links
+.links {
+  font-size: 1.25em;
+  a{
+    padding: .5em;
   }
+}
 
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
+// social media
+.social-media{
+  padding: 1em;
+  a{
+  color: $brown;
+  font-size: 1.25em;
+  padding: .25em;
+  &:hover {
+    color: darken($brown, 10%);
   }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+}
 }
