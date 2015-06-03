@@ -1,10 +1,19 @@
 /*global -$ */
 'use strict';
 // generated on 2015-06-03 using generator-gulp-webapp 0.3.0
-var gulp = require('gulp');
-var $ = require('gulp-load-plugins')();
+var gulp        = require('gulp');
+var $           = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
-var reload = browserSync.reload;
+var reload      = browserSync.reload;
+var deploy      = require('gulp-gh-pages');
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
+});
 
 gulp.task('styles', function () {
   return gulp.src('app/styles/main.scss')
